@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FastLingo - Learn a language quick thru reading</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/globe.js"></script>
+</head>
+<body>
+    <div id="globeViz"></div>
+    <div id="welcome">
+        <h1>Fast<i style="color: #de7900">Lingo</i></h1>
+        <h2>Learn a new language quick thru reading</h2>
+        <form id="myForm">
+            <input placeholder="https://example.com/page..." type="text" id="inputField" name="inputField" required>
+            <button type="submit">Lingofy</button>
+        </form>
+        <p id="ellipses">...</p>
+        <p id="lineURL">Lingofy ANY website,</p>
+        <p id="url">http://127.0.0.1:8000/<b>&#60;URL&#62;</b></p>
+        <div class="links" id="topLeft">
+            <span id="topText">Spanish</span><span id="removeDec">&darr;</span>
+            <div class="dropdown-content">
+                <p>French</p>
+                <p>German</p>
+                <p>Italian</p>
+                <p>Russian</p>
+                <p>Dutch</p>
+                <p>Portuguese</p>
+                <p>Turkish</p>
+                <p>Japanese</p>
+                <p>Greek</p>
+                <p>Hindi</p>
+                <p>Arabic</p>
+                <p>Chinese</p>
+                <p>Hebrew</p>
+                <p>Korean</p>
+            </div>
+        </div>
+        <p class="links" id="topRight">
+            <span class="link" onclick="window.open('/memory')">Memory Game</span> |
+            <span class="link" onclick="window.open('/words')">Your Word List</span>
+        </p>
+    </div>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>

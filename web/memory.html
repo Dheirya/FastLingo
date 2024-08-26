@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="und">
+<head>
+    <meta charset="utf-8">
+    <title>Fastlingo - Memory Game</title>
+    <link rel="stylesheet" href="/static/css/memory.css">
+</head>
+<body>
+    <h1><span style="color: orange">Memory</span> Game</h1>
+    <p id="pick1" style="margin-bottom: 10px">Pick a <a target="_blank" href="/words">word list</a> to play the memory game with, or click <a id="goBack" href="/">here</a> to go home:</p>
+    <div class="chip all">All</div>
+    <div class="chip missed">Tough</div>
+    <div class="chip general">General</div>
+    <div class="chip known">Known</div>
+    <p id="pick3">Your high score out of all the lists is: <b id="highScore">0</b>s</p>
+    <p id="pick2">Match the terms as quick as possible! Time: <b id="num">0</b>s</p>
+    <section id="playGridSection" style="display: none"></section>
+    <script src="/static/js/memory.js"></script>
+</body>
+</html>

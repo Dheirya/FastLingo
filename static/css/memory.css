@@ -1,0 +1,109 @@
+::backdrop, :root {
+    --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --bg: #212121;
+    --text: #dcdcdc;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--sans-font);
+    color: var(--text);
+    background-color: var(--bg);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 25px 10%;
+}
+.chip {
+    background: #2b2b2b;
+    border-radius: 5px;
+    padding: 6.5px 13px;
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+    display: inline-block;
+}
+a {
+    color: white;
+    font-weight: bold;
+}
+.missed {
+    color: #b65f5f;
+}
+.general {
+    color: #4d7ec4;
+}
+.known {
+    color: #6ab06a;
+}
+.chip:hover {
+    background: #3b3b3b;
+}
+#pick2 {
+    display: none;
+}
+#playGridSection {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    height: calc(100vh - 200px);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+section div {
+    background: #4d4d4d;
+    color: white;
+    align-self: stretch;
+    justify-self: stretch;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    border: 2px solid #363636;
+    transition: background 0.2s;
+}
+section div:hover {
+    background: #5d5d5d;
+}
+section div.active {
+    background: #6d6d6d;
+}
+section div.shake {
+    animation: shake 0.2s;
+    background: #823636;
+    animation-iteration-count: 1;
+}
+section div.correct {
+    visibility: hidden;
+    background: #416841;
+    opacity: 0;
+    transition: visibility 0s 0.2s, opacity 0.2s linear;
+}
+#goBack {
+    color: #4d7ec4;
+}
+#goBack:hover {
+    color: #336cbc;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+        transform: translate(-3px, 3px) rotate(-2deg);
+    }
+    40% {
+        transform: translate(3px, -3px) rotate(2deg);
+    }
+    60% {
+        transform: translate(-3px, 3px) rotate(-2deg);
+    }
+    80% {
+        transform: translate(3px, -3px) rotate(2deg);
+    }
+}

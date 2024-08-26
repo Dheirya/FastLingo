@@ -1,0 +1,278 @@
+::backdrop, :root {
+    --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --bg: #212121;
+    --text: #dcdcdc;
+}
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: var(--sans-font);
+    color: var(--text);
+    background-color: var(--bg);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 25px 10%;
+}
+a[target="_blank"] {
+    color: white;
+}
+.scroll-progress-wrap {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    cursor: pointer;
+}
+.scroll-progress-wrap div, .scroll-progress-wrap div span {
+    border-radius: 50%;
+}
+.scroll-progress-wrap div {
+    width: 46px;
+    height: 46px;
+    font-size: 1em;
+    color: var(--text);
+    text-align: center;
+    background: #ddd;
+}
+.scroll-progress-wrap div span {
+    position: absolute;
+    display: block;
+    width: 40px;
+    line-height: 40px;
+    margin-left: 3px;
+    margin-top: 3px;
+    background: var(--bg);
+}
+.y {
+    left: 1em;
+    width: 46px;
+}
+.x2 {
+    bottom: calc(1.75em + 42px);
+}
+.x3 {
+    bottom: calc(2.5em + 84px);
+    font-weight: bold;
+}
+.scroll-progress-wrap div span:hover {
+    filter: brightness(125%);
+}
+.a:hover {
+    background-color: orange;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 9px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 101%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    left: 50%;
+    margin-left: -105px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltiptext .openT {
+    border: none;
+    background-color: #97c897;
+    font-size: 13px;
+    padding: 5px 20px;
+    width: 50%;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.tooltiptext .btnActs {
+    margin-top: 5px;
+    cursor: pointer;
+    width: 40%;
+    padding: 6px;
+    background-color: #97c897;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #2d3c2d;
+}
+.tooltiptext .btnActs:hover {
+    background-color: #79b879;
+}
+.redBtn {
+    background-color: #b65f5f !important;
+    color: #492626 !important;
+}
+.redBtn:hover {
+    background-color: #a45656 !important;
+}
+.tooltiptext .sBtn {
+    cursor: pointer;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5px;
+    background: transparent;
+    color: white;
+    border: solid 1px #d3d3d3;
+}
+.sBtn:hover {
+    background-color: #525252;
+}
+.sBtn span {
+    font-size: 18px;
+}
+.btnCont {
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tooltiptext .openT:hover {
+    background-color: #79b879;
+}
+.tooltiptext:hover, .tooltip:hover .tooltiptext, .tooltip:active .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+mark {
+    padding: 1px 3px;
+    border-radius: 5px;
+    background-color: orange;
+    color: black;
+    cursor: pointer;
+}
+.toastify {
+    font-weight: 600;
+    cursor: pointer;
+}
+#goTo {
+    color: #4d7ec4 !important;
+}
+#goTo:hover {
+    color: #336cbc !important;
+}
+#l {
+    color: #b65f5f;
+}
+.modalBox {
+    background-color: #252525;
+    border: solid 4px #282828;
+    left: calc(46px + 1em + 10px);
+    bottom: 10px;
+    position: fixed;
+    border-radius: 10px;
+    padding: 15px;
+}
+.modalBox button {
+    background-color: #b1b1b1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.modalBox button:hover {
+    background-color: #7a7a7a;
+}
+.modalBox button.active {
+    background-color: #5f5f5f;
+}
+@media (max-width: 776px) {
+    body {
+        margin: 0 5%;
+        font-size: 1.01em;
+    }
+    .scroll-progress-wrap {
+        bottom: 0.5em;
+        right: 0.5em;
+    }
+    .y {
+        left: 0.5em;
+    }
+    .x2 {
+        bottom: calc(1em + 46px);
+    }
+    .x3 {
+        bottom: calc(1.5em + 92px);
+    }
+    .modalBox {
+        left: calc(46px + 0.5em + 5px);
+    }}
+#textRange {
+    width: 200px;
+    cursor: pointer;
+}
+#textRange[type="range"] {
+    -webkit-appearance: none;
+    border-radius: 15px;
+}
+#textRange[type="range"]:focus {
+    outline: none;
+}
+#textRange[type="range"]::-webkit-slider-runnable-track {
+    background: #cc4f39;
+    height: 10px;
+    border-radius: 15px;
+}
+#textRange[type="range"]::-moz-range-track {
+    background: #cc4f39;
+    height: 10px;
+}
+#textRange[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #ffc1b5;
+    margin-top: -5px;
+    border-radius: 50%;
+}
+#textRange[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    background: #ffc1b5;
+    margin-top: -5px;
+    border-radius: 50%;
+}
+.stat {
+    background: #2b2b2b;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 0.6em;
+    cursor: pointer;
+    margin: 0.33rem 0;
+}
+.learning {
+    background: #ffd548;
+    color: #71452b;
+}
+.known {
+    background: #8ad87d;
+    color: #36712c;
+}
+#mem {
+    color: #6ab06a;
+    font-weight: bold;
+}
+#mem:hover {
+    color: #5b975b;
+}

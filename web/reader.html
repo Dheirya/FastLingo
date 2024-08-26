@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="und">
+<head>
+    <meta charset="utf-8">
+    <title>Lingofying: "{{title}}"</title>
+    <link rel="stylesheet" href="/static/css/reader.css">
+    <link rel="stylesheet" href="/static/css/toastify.css">
+    <link rel="stylesheet" href="/static/css/materialIcons.css"/>
+</head>
+<body>
+    <h1 id="title"><span style="color: orange">Lingo</span>fying "<a href="{{url}}" target="_blank"><b>{{title}}</b></a>"</h1>
+    <p>Lingofying into <b id="l"></b>. To add a word into your <a id="goTo" style="color: inherit" href="/words" target="_blank"><b>word list</b></a>, just <b>click</b> on it! Review all your words by playing the word game <a id="mem" target="_blank" href="/memory">here</a>.</p>
+    <p>...</p>
+    <p id="content">{{text.replace('\n', '<br><br>')|safe}}</p>
+    <div id="box1" class="modalBox" style="display: none">
+        <b>Word Density</b><br/>
+        <button id="low">Low</button>
+        <button id="med">Medium</button>
+        <button id="high">High</button>
+        <br/>
+        <i id="reload" style="display: none"><a style="color: #dcdcdc" href="javascript:window.location.href=window.location.href">Reload</a> to update the page!</i>
+    </div>
+    <div id="box2" class="modalBox" style="display: none">
+        <b>Text Size</b><br/>
+        <input type="range" min="1" max="100" value="50" class="slider" id="textRange">
+        <br/>
+    </div>
+    <div class="scroll-progress-wrap y">
+        <div id="circ" class="p0">
+            <span>0</span>
+        </div>
+    </div>
+    <div class="scroll-progress-wrap y x2">
+        <div class="a p0">
+            <span class="material-symbols-outlined">translate</span>
+        </div>
+    </div>
+    <div class="scroll-progress-wrap y x3">
+        <div class="a p0">
+            <span class="material-symbols-outlined">format_size</span>
+        </div>
+    </div>
+    <div class="scroll-progress-wrap x" onclick="window.location.href = window.location.origin">
+        <div class="a p0">
+            <span class="material-symbols-outlined">home</span>
+        </div>
+    </div>
+    <div class="scroll-progress-wrap x2" onclick="window.open(window.location.origin + '/words')">
+        <div class="a p0">
+            <span class="material-symbols-outlined">dictionary</span>
+        </div>
+    </div>
+    <div class="scroll-progress-wrap x3" onclick="window.open(window.location.origin + '/memory')">
+        <div class="a p0">
+            <span class="material-symbols-outlined">toys_and_games</span>
+        </div>
+    </div>
+    <script src="/static/js/toastify.js"></script>
+    <script src="/static/js/reader.js"></script>
+</body>
+</html>

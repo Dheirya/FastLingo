@@ -1,0 +1,148 @@
+:root, ::backdrop {
+    --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+html {
+    font-family: var(--sans-font);
+    margin: 0;
+}
+body {
+    margin: 0;
+}
+#welcome {
+    text-align: center;
+    position: absolute;
+    width: 60%;
+    z-index: 500;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#welcome:hover {
+    border: 2px solid rgba(255, 255, 255, 0.18);
+}
+#welcome h1 {
+    font-size: 3rem;
+    font-weight: 1000;
+    margin-bottom: 0;
+    margin-top: 35px;
+    color: #2c3441;
+}
+#welcome h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #323b49;
+}
+#welcome form {
+    position: relative;
+    width: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#welcome input {
+    width: calc(100% - 57.5px);
+    padding: 0.67rem 57.5px 0.67rem 0.67rem;
+    border: 1px solid #999;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+#welcome button {
+    background-color: #FFD580;
+    cursor: pointer;
+    border: 1px solid #de7900;
+    color: #de7900;
+    font-weight: 500;
+    height: 100%;
+    position: absolute;
+    left: calc(100% - 41.5px);
+    top: 0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#welcome button:hover {
+    background-color: #ffd98d;
+}
+#globeViz {
+    font-family: var(--mono-font);
+}
+p {
+    font-size: 1.25rem;
+    color: #323b49;
+    margin-bottom: 0;
+}
+#ellipses {
+    margin-top: 7.5px;
+    margin-bottom: 15px;
+}
+#lineURL {
+    margin-top: 0;
+}
+#url {
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 45px;
+}
+.links {
+    font-size: 1em;
+    position: absolute;
+    z-index: 1000;
+}
+#topText {
+    color: #323b49;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#topText:hover {
+    filter: brightness(25%);
+}
+.link:hover {
+    filter: brightness(25%);
+}
+.link {
+    text-decoration: underline;
+}
+#topLeft {
+    top: 15px;
+    left: 20px;
+}
+#topRight {
+    top: 0;
+    right: 15px;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    text-align: left;
+}
+.dropdown-content p {
+    font-size: 0.741rem;
+    margin: 5px;
+    cursor: pointer;
+}
+.dropdown-content p:hover {
+    filter: brightness(1%);
+}
+#topLeft:hover .dropdown-content {
+    display: block;
+}
+#removeDec {
+    color: #323b49;
+    filter: brightness(25%);
+    cursor: pointer;
+    margin-left: 2px;
+}

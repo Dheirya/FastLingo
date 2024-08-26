@@ -1,0 +1,136 @@
+::backdrop, :root {
+    --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --bg: #212121;
+    --text: #dcdcdc;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--sans-font);
+    color: var(--text);
+    background-color: var(--bg);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 25px 10%;
+}
+.words-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -5px;
+}
+.width-xs {
+    width: calc(16% - 10px);
+}
+.notice {
+  background: #2b2b2b;
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin: 0.33rem 0;
+  position: relative;
+}
+@media (max-width: 776px) {
+    body {
+        margin: 0 5%;
+        font-size: 1.01em;
+    }
+    .width-xs {
+        width: calc(26.7% - 10px);
+    }
+}
+@media (max-width: 700px) {
+    .width-xs {
+        width: calc(100%);
+    }
+}
+#goBack {
+    color: #4d7ec4;
+}
+#goBack:hover {
+    color: #336cbc;
+}
+#clear {
+    color: #b65f5f;
+}
+#clear:hover {
+    color: #a45656;
+}
+#memory {
+    color: #6ab06a;
+}
+#memory:hover {
+    color: #5b975b;
+}
+.btn {
+    right: 7.5px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+.delete {
+    bottom: 20px;
+    border: solid 1px #bd6f6f;
+    color: #bd6f6f;
+}
+.delete:hover {
+    color: #b65f5f;
+    border: solid 1px #b65f5f;
+}
+.lower {
+    top: 50%;
+    transform: translateY(-50%);
+    border: solid 1px #6ab06a;
+    color: #6ab06a;
+}
+.lower:hover {
+    border: solid 1px #5b975b;
+    color: #5b975b;
+}
+.upper {
+    top: 20px;
+    border: solid 1px #ffb733;
+    color: #ffb733;
+}
+.upper:hover {
+    border: solid 1px #ffa500;
+    color: #ffa500;
+}
+.btn span {
+    font-size: 20px;
+}
+.showMore {
+    position: relative;
+    padding: 10px 17.5px;
+    font-size: 0.75rem;
+    background: #171717;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 7.5px;
+    border: none;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.showMore:hover {
+    background: #1a1a1a;
+}
+li {
+    margin-top: -12.5px;
+}
+ul, li {
+    margin-left: -10px !important;
+    margin-bottom: -15px;
+}
+.small {
+    font-size: smaller;
+    margin-bottom: 7.5px;
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="und">
+<head>
+    <meta charset="utf-8">
+    <title>Fastlingo - Your Word Lists</title>
+    <link rel="stylesheet" href="/static/css/word.css">
+    <link rel="stylesheet" href="/static/css/materialIcons.css"/>
+</head>
+<body>
+    <h1>Your <span style="color: orange">Word</span> Lists</h1>
+    <p style="margin-bottom: 20px">Click <b><a id="goBack" href="/">here</a></b> to go back to the homepage, <b><a target="_blank" href="/memory" id="memory">here</a></b> to play the memory game, or <b><a href="#" id="clear">here</a></b> to clear all items in the list.</p>
+    <ul><li><p>Here are the <b id="missedNums">0</b> words you have on your <b>tough</b> words list:</p></li></ul>
+    <div class="small" id="missedMem">Click <a style="color: #ccc" href="/memory?list=missed" target="_blank">here</a> to play the memory game using the <i>tough</i> list!</div>
+    <div id="missedWords" class="words-grid"></div>
+    <ul><li><p>Here are the <b id="wordNums">0</b> words you have on your <b>general</b> words list:</p></li></ul>
+    <div class="small" id="wordMem">Click <a style="color: #ccc" href="/memory?list=general" target="_blank">here</a> to play the memory game using the <i>general</i> list!</div>
+    <div id="words" class="words-grid"></div>
+    <ul><li><p>Here are the <b id="knownNums">0</b> words you have on your <b>known</b> words list:</p></li></ul>
+    <div class="small" id="knownMem">Click <a style="color: #ccc" href="/memory?list=known" target="_blank">here</a> to play the memory game using the <i>known</i> list!</div>
+    <div id="knownWords" class="words-grid"></div>
+    <script src="/static/js/word.js"></script>
+</body>
+</html>
