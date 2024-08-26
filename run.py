@@ -1,6 +1,7 @@
 from fastapi.responses import HTMLResponse, PlainTextResponse
 from urllib.request import Request as URLRequest
 from fastapi.templating import Jinja2Templates
+from starlette.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI, Request
 from urllib.request import urlopen
@@ -40,18 +41,18 @@ def get_text(url: str):
 
 
 @app.get("/")
-async def home(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+async def index():
+    return FileResponse("web/index.html")
 
 
 @app.get("/words")
-async def words(request: Request):
-    return templates.TemplateResponse("word.html", {"request": request})
+async def word():
+    return FileResponse("web/word.html")
 
 
 @app.get("/memory")
-async def game(request: Request):
-    return templates.TemplateResponse("memory.html", {"request": request})
+async def memory():
+    return FileResponse("web/memory.html")
 
 
 @app.get("/{url:path}", response_class=HTMLResponse)
