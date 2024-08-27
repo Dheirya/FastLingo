@@ -1,3 +1,4 @@
+document.getElementById("domain").innerHTML = window.location.href;
 function gETC(parentSelector, textContent) {
     const parentElement = document.querySelector(parentSelector);
     const elements = parentElement.querySelectorAll('p');
@@ -29,7 +30,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const input = document.getElementById('inputField').value;
     if (input && /^https?:\/\//i.test(input)) {
-        const baseURL = 'http://127.0.0.1:8000/';
+        const baseURL = window.location.href.split('?')[0].replace(/\/$/, '');
         if (!localStorage.getItem('density')) {
             localStorage.setItem('density', 'medium');
         }
