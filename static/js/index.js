@@ -34,7 +34,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
         if (!localStorage.getItem('density')) {
             localStorage.setItem('density', 'medium');
         }
-        window.location.href = baseURL + encodeURIComponent(input) + "?l=" + localStorage.getItem("lang") + "&density=" + localStorage.getItem("density");
+        window.location.href = baseURL + "/" + encodeURIComponent(input) + "?l=" + localStorage.getItem("lang") + "&density=" + localStorage.getItem("density");
     } else {
         alert('Invalid URL');
     }
