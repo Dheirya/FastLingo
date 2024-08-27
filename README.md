@@ -12,6 +12,10 @@ TBA..
 - Locally stored flashcards
 - Fun memory game
 
+## Demo
+
+A demo is available [here](http://fastlingo.koyeb.app)
+
 
 ## Installation
 
