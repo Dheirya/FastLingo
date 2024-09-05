@@ -83,7 +83,8 @@ let langConversions = {
     'Italian': 'it',
     'Russian': 'ru',
     'Dutch': 'nl',
-    'Portuguese': 'pt'
+    'Portuguese': 'pt',
+    'English': 'en'
 };
 let synth = window.speechSynthesis;
 let voices = synth.getVoices();

@@ -69,7 +69,7 @@ const arcsData = [...Array(K).keys()].map(() => ({
     endLng: (Math.random() - 0.5) * 360,
     color: "#" + ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0")
 }));
-const globe = Globe().globeImageUrl('/static/images/earth-dark.jpg').htmlElementsData(gData).htmlElement(d => {
+const globe = Globe().globeImageUrl('https://cdn.jsdelivr.net/gh/Dheirya/FastLingo@latest/static/images/earth-dark.jpg').htmlElementsData(gData).htmlElement(d => {
     const el = document.createElement('div');
     el.innerHTML = hellos[0];
     hellos.shift();
@@ -77,7 +77,7 @@ const globe = Globe().globeImageUrl('/static/images/earth-dark.jpg').htmlElement
     el.style.fontWeight = 'bold';
     el.style.textShadow = '1px 1px 2px white';
     return el;
-}).arcsData(arcsData).arcColor('color').arcDashLength(() => Math.random()).arcDashGap(() => Math.random()).arcDashAnimateTime(() => 5000).backgroundImageUrl('/static/images/night-sky.png')(document.getElementById('globeViz'));
+}).arcsData(arcsData).arcColor('color').arcDashLength(() => Math.random()).arcDashGap(() => Math.random()).arcDashAnimateTime(() => 5000).backgroundImageUrl('https://cdn.jsdelivr.net/gh/Dheirya/FastLingo@latest/static/images/night-sky.png')(document.getElementById('globeViz'));
 globe.pointOfView({lng: 0, altitude: 1});
 let rotate = false;
 let u = +1;

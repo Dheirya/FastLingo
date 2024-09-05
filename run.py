@@ -15,7 +15,7 @@ import re
 app = FastAPI()
 templates = Jinja2Templates(directory="web")
 app.mount("/static", StaticFiles(directory="static"), name="static")
-language_codes = {'Korean': 'ko', 'Hebrew': 'he', 'Chinese': 'zh', 'Arabic': 'ar', 'Hindi': 'hi', 'Greek': 'el', 'Turkish': 'tr', 'Japanese': 'ja', 'Spanish': 'es', 'French': 'fr', 'German': 'de', 'Italian': 'it', 'Russian': 'ru', 'Dutch': 'nl', 'Portuguese': 'pt'}
+language_codes = {'Korean': 'ko', 'Hebrew': 'he', 'Chinese': 'zh', 'Arabic': 'ar', 'Hindi': 'hi', 'Greek': 'el', 'Turkish': 'tr', 'Japanese': 'ja', 'Spanish': 'es', 'French': 'fr', 'German': 'de', 'Italian': 'it', 'Russian': 'ru', 'Dutch': 'nl', 'Portuguese': 'pt', 'English': 'en'}
 
 
 def is_ascii(s):
