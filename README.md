@@ -14,7 +14,7 @@ TBA..
 
 ## Demo
 
-A demo is available [here](http://fastlingo.koyeb.app)
+A demo is available [here](https://fastlingo.koyeb.app)
 
 
 ## Installation
@@ -31,17 +31,17 @@ You can run this project locally via Uvicorn
 uvicorn run:app --reload 
 ```
 ## Screenshots
-![Index Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo/static/demo/index.png)
+![Index Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo@latest/static/demo/index.png)
 
-![Reader Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo/static/demo/reader.png)
+![Reader Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo@latest/static/demo/reader.png)
 
-![Hover Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo/static/demo/hover.png)
+![Hover Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo@latest/static/demo/hover.png)
 
-![Hover Click Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo/static/demo/hoverClick.png)
+![Hover Click Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo@latest/static/demo/hoverClick.png)
 
-![List Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo/static/demo/list.png)
+![List Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo@latest/static/demo/list.png)
 
-![Game Site Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo/static/demo/game.png)
+![Game Site Screenshot](https://cdn.jsdelivr.net/gh/Dheirya/FastLingo@latest/static/demo/game.png)
 
 
 ## License
